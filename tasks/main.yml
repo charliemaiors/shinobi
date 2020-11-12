@@ -66,7 +66,7 @@
     global: true
     state: present
 
-- name:  Get users table
+- name: Get users table
   command: mysql -h {{ db_host }} -u {{ shinobi_user }} -p{{ shinobi_pass }} {{ db_name }} -Ns -e "SHOW TABLES LIKE 'Users'"
   register: users_table
   changed_when: false
